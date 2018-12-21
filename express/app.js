@@ -10,8 +10,9 @@ const CORS = require("cors");
 const port = process.env.PORT || 8000;
 const app = express();
 app.use(bodyParser.json()); // Parse JSON from the request body
-app.use(morgan("combined")); // Log all requests to the console
+app.use(morgan("combined")); // Log all requests to the console 1 sec
 app.use(CORS());
+app.use(express.static('../dist/reviewApp'))
 
 // setup mongoose
 const MONGO_URI =
@@ -38,7 +39,7 @@ const config = require("./config/dabase");
 
 /**** Reroute all unknown requests to angular index.html ****/
 app.get("/*", (req, res, next) => {
-  res.sendFile(path.join(__dirname, "../src/index.html"));
+  res.sendFile(path.join(__dirname, "../dist/reviewApp/index.html"));
 });
 
 // register new user
