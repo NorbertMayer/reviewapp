@@ -1,0 +1,22 @@
+<div class="container">
+  <!-- Menu -->
+  <!-- Menu -->
+  <nav class="navbar navbar-white bg-white">
+    <a routerLink="/" class="navbar-brand">
+      <img src="./assets/logo.png" alt="The Foo Bar Logo" style="width: 80px" />
+    </a>
+    <ul class="nav"></ul>
+    <div style="display: inline-flex">
+      <a class="nav-link" *ngIf="!registerService.loggedIn()" routerLink="/login" routerLinkActive="active">Login</a>
+      <a class="nav-link" *ngIf="!registerService.loggedIn()" routerLink="/register" routerLinkActive="active">Register</a>
+      <a style="cursor:pointer" *ngIf="registerService.loggedIn()" (click)="registerService.logoutUser()">Logout</a>
+    </div>
+  </nav>
+
+  <div class="jumbotron">
+    <h1 class="text-center">Review WEB APP</h1>
+    <p class="text-center">Check latest reviews</p>
+  </div>
+
+  <router-outlet></router-outlet>
+</div>

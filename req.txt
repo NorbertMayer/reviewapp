@@ -1,0 +1,27 @@
+Functional requirements
+The solution must be a website that provides the functionality described in the sections below.
+
+Front page
+A front page that displays the last 10 reviews added to the site. The front page must keep updating itself in real-time without a page reload when new reviews are posted.
+The front page must contain functionality that allows the users to navigate to the “Details page” corresponding to any website on the internet. A website in this case is uniquely identified by its domain name (e.g. “www.google.com” or “www.eaaa.dk”). This could be a simple form with a “Go” button that takes the user to the details page for whatever domain name was written in the input field.
+It should also be possible for the user to navigate from the front page to the “Login page”. The front page should indicate whether the user is logged in or not, and have a way for the user to “log out”.
+
+Details page
+A page that shows details about a specific website, identified by its domain name. The details include the following:
+ All reviews given to the specific site.
+ The average score among all reviews given to the specific site.
+ A link to the “Post Review” page for the specific site.
+If no data is available for the specific website (no reviews), the page should say so.
+Each “Details page” for a specific website should have a unique URL.
+
+Post Review page
+A page where users can post a review of a specific site. This page should clearly identify which site is being reviewed (identified by its domain name). Only logged in users can post a review. A review contains at least the following data:
+ The domain name of the site being reviewed.
+ A title (written by the user)
+ The review text (written by the user)
+ Name of reviewer (equal to the username)
+ The score from 1-5 (given by the user)
+Each “Post Review page” for a specific website should have a unique URL in this app.
+
+Login page
+A page where users can either login to the site using an existing username / password combination, or sign
