@@ -7,7 +7,7 @@ const jwt = require("jsonwebtoken");
 const CORS = require("cors");
 
 /**** Configuration ****/
-const port = server.listen(process.env.PORT || 8000);
+const port = process.env.PORT || 8080;
 const app = express();
 app.use(bodyParser.json()); // Parse JSON from the request body
 app.use(morgan("combined")); // Log all requests to the console
@@ -35,6 +35,10 @@ const User = require("./models/user");
 const Domain = require("./models/domain");
 const Review = require("./models/review");
 const config = require("./config/dabase");
+
+app.get("/", (req, res) => {
+  res.send("test");
+})
 
 // register new user
 app.post("/register", (req, res) => {
