@@ -7,7 +7,7 @@ const jwt = require("jsonwebtoken");
 const CORS = require("cors");
 
 /**** Configuration ****/
-const port = process.env.PORT || 8000;
+const port = server.listen(process.env.PORT || 8000);
 const app = express();
 app.use(bodyParser.json()); // Parse JSON from the request body
 app.use(morgan("combined")); // Log all requests to the console
