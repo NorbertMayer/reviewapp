@@ -10,7 +10,7 @@ const CORS = require("cors");
 const port = process.env.PORT || 8000;
 const app = express();
 app.use(bodyParser.json()); // Parse JSON from the request body
-app.use(morgan("combined")); // Log all requests to the console 1 sec
+app.use(morgan("combined"));
 app.use(CORS());
 app.use(express.static('../dist/reviewApp'))
 
