@@ -36,9 +36,10 @@ const Domain = require("./models/domain");
 const Review = require("./models/review");
 const config = require("./config/dabase");
 
-app.get("/", (req, res) => {
-  res.send("test");
-})
+/**** Reroute all unknown requests to angular index.html ****/
+app.get("/*", (req, res, next) => {
+  res.sendFile(path.join(__dirname, "../src/index.html"));
+});
 
 // register new user
 app.post("/register", (req, res) => {
